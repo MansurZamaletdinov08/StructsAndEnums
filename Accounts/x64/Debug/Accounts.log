@@ -1,0 +1,3 @@
+﻿  Accounts.cpp
+C:\Users\Админ\Desktop\Homewrork\Accounts\Accounts.cpp(14,22): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Accounts.vcxproj -> C:\Users\Админ\Desktop\Homewrork\Accounts\x64\Debug\Accounts.exe
