@@ -2,7 +2,7 @@
 
 
 enum month {
-    January,
+    January = 1,
     February,
     March,
     April,
@@ -17,9 +17,6 @@ enum month {
 };
 
 
-int print_months(int mon_id) {
-    return mon_id;
-}
 
 
 int main() {
@@ -39,58 +36,60 @@ int main() {
 
 
     int x;
-    std::cout << "Введите число от 1 до 12: ";
-    std::cin >> x;
-    x = x - 1;
+    do {
+        std::cout << "Введите число от 1 до 12: ";
+        std::cin >> x;
 
-    static_cast<month>(x);
-    if (x <= 12) {
-        switch (x) {
-        case January:
-            std::cout << "Сейчас Январь";
-            break;
-        case February:
-            std::cout << "Сейчас Февраль";
-            break;
-        case March:
-            std::cout << "Сейчас Март";
-            break;
-        case April:
-            std::cout << "Сейчас Апрель";
-            break;
-        case May:
-            std::cout << "Сейчас Май";
-            break;
-        case June:
-            std::cout << "Сейчас Июнь";
-            break;
-        case July:
-            std::cout << "Сейчас Июль";
-            break;
-        case August:
-            std::cout << "Сейчс Август";
-            break;
-        case September:
-            std::cout << "Сейчас Сентбрь";
-            break;
-        case October:
-            std::cout << "Сейчас Октябрь";
-            break;
-        case November:
-            std::cout << "Сейчас Ноябрь";
-            break;
-        case December:
-            std::cout << "Сейчас Декабрь!";
-            break;
-            if (x == 0) {
-                std::cout << "До свидания!";
+        static_cast<month>(x);
+        if (x <= 12) {
+            switch (x) {
+            case January:
+                std::cout << "Сейчас Январь" << std::endl;
+                break;
+            case February:
+                std::cout << "Сейчас Февраль" << std::endl;
+                break;
+            case March:
+                std::cout << "Сейчас Март" << std::endl;
+                break;
+            case April:
+                std::cout << "Сейчас Апрель" << std::endl;
+                break;
+            case May:
+                std::cout << "Сейчас Май" << std::endl;
+                break;
+            case June:
+                std::cout << "Сейчас Июнь" << std::endl;
+                break;
+            case July:
+                std::cout << "Сейчас Июль" << std::endl;
+                break;
+            case August:
+                std::cout << "Сейчс Август" << std::endl;
+                break;
+            case September:
+                std::cout << "Сейчас Сентбрь" << std::endl;
+                break;
+            case October:
+                std::cout << "Сейчас Октябрь" << std::endl;
+                break;
+            case November:
+                std::cout << "Сейчас Ноябрь" << std::endl;
+                break;
+            case December:
+                std::cout << "Сейчас Декабрь!" << std::endl;
+                break;
+                if (x == 0) {
+                    std::cout << "До свидания!" << std::endl;
+                }
             }
         }
-    }
-    else {
-        std::cout << "Неправильный номер!";
-        return -1;
-    }
-
-    int mon_id = x;
+        if (x == 0) {
+            std::cout << "До свидания!";
+            return 0;
+        }
+        if (x > 12 || x < 0) {
+            std::cout << "Не правильный номер" << std::endl;
+        }
+    } while (x < 12 || x > 0);
 }
